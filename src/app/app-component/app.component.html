@@ -1,0 +1,11 @@
+<p-dock [model]="items" [position]="'bottom'">
+  <ng-template pTemplate="item" let-item>
+    <a routerLink="{{item.link}}" routerLinkActive="active" ariaCurrentWhenActive="page">
+      <img [src]="item.icon" [alt]="item.label" width="100%" />
+    </a>
+  </ng-template>
+</p-dock>
+
+
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
